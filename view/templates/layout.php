@@ -15,8 +15,7 @@
                     <ul>
                         <li><a href="<?= $_SERVER['PHP_SELF'] ?>">Home</a></li>
                             <li><a href="services">Services</a></li>
-                            <li><a href="#">Order</a></li>
-                            <li><a href="#">Gallery</a></li>
+                            <li><a href="order">Order</a></li>
                     </ul>
             </div>
             <div class="body">
@@ -27,7 +26,6 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Order</a></li>
-                        <li><a href="#">Gallery</a></li>
                     </ul>
                     <p>&#169; Copyright &#169; 2011. Company name all rights reserved</p>
             </div>

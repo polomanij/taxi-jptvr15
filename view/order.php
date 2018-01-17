@@ -6,22 +6,22 @@
 <form method="post" class="order clearfix">
     <div class="order-item clearfix">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name">
+        <input type="text" id="name" name="name" required>
     </div>
 
     <div class="order-item clearfix">
         <label for="tel">Tel.</label>
-        <input type="text" id="tel" name="tel">
+        <input type="text" id="tel" name="tel" required>
     </div>
     
     <div class="order-item clearfix">
         <label for="adress">Adress</label>
-        <input type="text" id="adress" name="adress">
+        <input type="text" id="adress" name="adress" required>
     </div>
     
     <div class="order-item clearfix">
         <label for="services">services:</label>
-        <select id="services" name="services">
+        <select id="services" name="service" required>
             <?php foreach ($args1 as $service): ?>
                 <option><?= $service->name ?></option>
             <?php endforeach; ?>

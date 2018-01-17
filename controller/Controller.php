@@ -34,7 +34,12 @@ class Controller extends RenderTemplate
     
     public function order()
     {
-        $html = $this->render('view/order.php');
+        if (isset($_POST['submit'])) {
+            
+        }
+        $services = Model::get_services();
+        
+        $html = $this->render('view/order.php', $services);
         
         return $html;
     }

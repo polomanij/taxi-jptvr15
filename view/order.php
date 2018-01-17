@@ -3,24 +3,37 @@
     <h3>Order Form</h3>
 </div>
 
-<form method="post" class="order">
+<form method="post" class="order clearfix">
+    <div class="order-item clearfix">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+    </div>
 
-    <div class="order-item">
+    <div class="order-item clearfix">
         <label for="tel">Tel.</label>
         <input type="text" id="tel" name="tel">
     </div>
     
-    <div class="order-item">
+    <div class="order-item clearfix">
         <label for="adress">Adress</label>
         <input type="text" id="adress" name="adress">
     </div>
-
-    <div class="order-item">
-        <label for="message">Message</label>
-        <input type="text" id="message" name="message">
+    
+    <div class="order-item clearfix">
+        <label for="services">services:</label>
+        <select id="services" name="services">
+            <?php foreach ($args1 as $service): ?>
+                <option><?= $service->name ?></option>
+            <?php endforeach; ?>
+        </select>
     </div>
 
-    <input type="submit" value="Send">
+    <div class="order-item clearfix">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+    </div>
+    
+    <input type="submit" value="Send" name="submit">
 </form>
 
 <?php

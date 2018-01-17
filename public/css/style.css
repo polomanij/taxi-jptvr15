@@ -405,7 +405,22 @@ a {
 }
 
 .order-item {
+    width: 400px;
     margin-bottom: 20px;
+}
+
+.order-item label {
+    float: left;
+}
+
+.order-item input, .order-item textArea, .order-item select {
+    float: right;
+}
+
+.order-item textArea {
+    width: 250px;
+    height: 70px;
+    resize: none;
 }
 
 .clearfix:after {

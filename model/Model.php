@@ -11,7 +11,7 @@ class Model
         
         $services_arr = [];
         foreach ($rows as $row) {
-            $service = new Service($row["id"], $row["name"], $row["description"], $row["content"], $row["img"]);
+            $service = new Service($row["id"], $row["name"], $row["description"], $row["text"], $row["img"]);
             $services_arr[] = $service;
         }
         

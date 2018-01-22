@@ -4,6 +4,14 @@
 </div>
 
 <form method="post" class="order clearfix">
+    <div class="order-success">
+        <?php
+            if (isset($args2) && is_array($args2)) {
+                echo $args2[0];
+            }
+        ?>
+    </div>
+    
     <div class="order-item clearfix">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>

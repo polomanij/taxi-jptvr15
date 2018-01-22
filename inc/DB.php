@@ -12,7 +12,6 @@ class DB
     private function connect()
     {
         $config = require_once __dir__ . '/../conf/db_conf.php';
-        
         $dsn = 'mysql:host=' . $config['host'] . ';dbname=' . $config['db_name'] . ';charset=' . $config['charset'];
         
         try {
@@ -52,5 +51,38 @@ class DB
         $response = $result->fetchAll();
         
         return $response;
+    }
+
+        public function insertUser($query, $data)
+    {
+        if (is_array($data)  && !empty($data)) {
+            $result = $this->link->prepare($query);
+            
+            return $result->execute([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'pass' => password_hash($data['pass'], PASSWORD_DEFAULT),
+            ]);
+        }
+    }
+    
+    public function insertService($query, $values)
+    {
+        $result = $this->link->prepare($query);
+
+        try {
+            /*$result->execute([
+                'name' => $values['name'],
+                'description' => $values['description'],
+                'content' => $values['content'],
+                'price' => $values['price'],
+                'img' => $values['img']
+            ]);*/
+            
+            $result->execute($values);
+        } catch (Exception $ex) {
+            echo $ex->getMessage();
+            die;
+        }
     }
 }

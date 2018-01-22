@@ -7,7 +7,7 @@
     </div>
 
     <p><?= $args1['description']; ?></p>
-    <p><?= $args1['text']; ?></p>
+    <p><?= $args1['content']; ?></p>
     <p><?= $args1['price'] . ' EUR'; ?></p>
     <a href="order">Make order</a>
 </div>

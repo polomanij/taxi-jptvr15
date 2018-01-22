@@ -19,15 +19,7 @@
                     <ul>
                         <li><a href="<?= $_SERVER['PHP_SELF'] ?>">Home</a></li>
                             <li><a href="services">Services</a></li>
-                            <li><a href="order">Order</a></li>
-                            <?php
-                                if ($is_login) {
-                                    echo '<li><a href="logout">Logout</a></li>';
-                                } else {
-                                    echo '<li><a href="register">Register</a></li>';
-                                    echo '<li><a href="login">Login</a></li>';
-                                }
-                            ?>
+                            <li><a href="logout">Logout</a></li>
                     </ul>
             </div>
             <div class="body">

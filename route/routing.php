@@ -25,4 +25,24 @@ if ($uri === '' || $uri === 'index.php') {
     $response = $controller->order();
     
     return $response;
+} elseif ($uri === 'register') {
+    $controller = new Controller();
+    
+    $response = $controller->register();
+    
+    return $response;
+} elseif ($uri === 'login') {
+    $controller = new Controller();
+    
+    $response = $controller->login();
+    
+    return $response;
+} elseif ($uri === 'logout') {
+    $controller = new Controller();
+    
+    $response = $controller->logout();
+    
+    return $response;
+} else {
+    echo '404';die;
 }

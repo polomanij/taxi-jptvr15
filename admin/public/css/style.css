@@ -13,6 +13,10 @@ a {
 	background:url(../images/bg-header.jpg) no-repeat center top;
 }
 
+input {
+    background: white;
+}
+
 /*------------------------- Font ------------------------*/ 
 @font-face {
     font-family: 'RokkittRegular';
@@ -73,7 +77,7 @@ a {
 	height:448px;
 	padding:0 0 17px;
 }
-.body div#featured h3{
+.body div#featured h3 {
 	color:#f78117;
 	font-size:36px;
 	font-family: 'RokkittRegular';
@@ -429,10 +433,38 @@ a {
     margin-bottom: 15px;
 }
 
+.create-btn, .create-input {
+    display: block;
+    width: 175px;
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background: green;
+    margin-top: 15px;
+}
+
+.create-input {
+    width: auto;
+}
+
 .clearfix:after {
    content: " "; /* Older browser do not support empty content */
    visibility: hidden;
    display: block;
    height: 0;
    clear: both;
+}
+
+.admin-h3 h3{
+    font-size:20px;
+    font-weight:bold;
+    font-family: 'RokkittRegular';
+    color:#f28220;
+    line-height:22px;
+}
+
+.service-table, .service-table th, .service-table td {
+    border: 3px solid black;
+    border-collapse: collapse;
 }
